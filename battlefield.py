@@ -1,4 +1,6 @@
 from .fight import fight
+
+
 class Battlefield():
   """Battlefield used to battle two army against each other"""
 
@@ -10,18 +12,17 @@ class Battlefield():
     """
     unit_1 = army[0]
     unit_2 = army2[0]
-    
     while True:
         ret = fight(unit_1, unit_2)
         if not ret:
           unit_1 = army.pop()
-          if len(army)<1:
+          if len(army) < 1:
             return False
           unit_1 = army[0]
           unit_2 = army2[0]
-        if ret :
+        if ret:
           unit_2 = army2.pop()
-          if len(army2)<1:
+          if len(army2) < 1:
             return True
           unit_1 = army[0]
           unit_2 = army2[0]
