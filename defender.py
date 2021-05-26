@@ -1,5 +1,6 @@
 from part1.warrior import Warrior
 
+
 class Defender(Warrior):
   """Trainned from Warrior."""
 
