@@ -8,19 +8,20 @@ class Battlefield():
     :param army2: Second army
     :return bool: Did the first army won ?
     """
-    unit_1 = army.pop()
-    unit_2 = army2.pop()
+    unit_1 = army[0]
+    unit_2 = army2[0]
     
     while True:
-      try:
-        len(army)>0 and len(army2)>0
         ret = fight(unit_1, unit_2)
         if not ret:
           unit_1 = army.pop()
-        else:
+          if len(army)<1:
+            return False
+          unit_1 = army[0]
+          unit_2 = army2[0]
+        if ret :
           unit_2 = army2.pop()
-      except:
-        break
-
-    return unit_1.isalive()
-    
+          if len(army2)<1:
+            return True
+          unit_1 = army[0]
+          unit_2 = army2[0]
