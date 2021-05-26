@@ -36,8 +36,6 @@ class Warrior:
       self._alive = False
       self._life = 0
 
-
-
   def isalive(self):
     """:return bool: is Warrior Alive"""
     return self._alive
