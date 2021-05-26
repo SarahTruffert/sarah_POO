@@ -25,11 +25,9 @@ class Army():
     :param cls: Class to be instancied
     :param number: Number of instance to create
     """
-    # Quand plus grand que 0, enlève la valeur de number 
-    while number>0:
+    while number > 0:
       self._army.append(cls())
-      number-=1
-
+      number -= 1
 
   def pop(self):
     """return the first soldier of the army"""
